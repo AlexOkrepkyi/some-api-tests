@@ -1,12 +1,13 @@
 ## Project description
 
 A total of 6 tests have been created, 1 per endpoint (/details, /price, etc.). 
+
 As a diversification of test data, each test utilizes a random object of active 
 exchange-pair set, randomly obtained from the /list endpoint. 
 
 Simple logging has been added.
 
-The following external libraries have been user:
+The following external libraries are used:
 * `pytest`
 * `request` 
 * `pytest-env`
