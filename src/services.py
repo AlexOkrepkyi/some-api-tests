@@ -3,8 +3,8 @@ import random
 
 import requests
 
-from src.response import AssertableResponse, AssertableSummaryResponse, AssertableOrderbookResponse, \
-    AssertablePriceResponse, AssertableDetailsResponse, AssertableOhlcResponse
+from src.response import AssertableSummaryResponse, AssertableOrderbookResponse, \
+    AssertablePriceResponse, AssertableDetailsResponse, AssertableOhlcResponse, AssertableTradesResponse
 
 
 class MarketsApiServices(object):
@@ -95,4 +95,4 @@ class TradesApiServices(MarketsApiServices):
         super().__init__()
 
     def get_trades(self, exchange, pair):
-        return AssertableResponse(self._get_base_url_including_exchange_pair_endpoint(exchange, pair, "trades"))
+        return AssertableTradesResponse(self._get_base_url_including_exchange_pair_endpoint(exchange, pair, "trades"))

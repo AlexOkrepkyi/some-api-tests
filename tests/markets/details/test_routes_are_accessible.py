@@ -9,6 +9,8 @@ def test_routes_are_accessible():
     pair = exchange_pair["pair"]
 
     response = DetailsApiServices().get_exchange_and_pair_details(exchange, pair)
+    assert response.status_code(200)
+
     routes = response.routes()
     for r in routes:
         route = requests.get(routes[r])
